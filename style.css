@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rethink Sans", serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #4b4492;
+}
+
+.main::before {
+  position: absolute;
+  content: "";
+  top: -100px;
+  left: -150px;
+  width: 250px;
+  height: 250px;
+
+  background-color: #38336d;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.main::after {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 250px;
+  z-index: -1;
+  right: -150px;
+  bottom: -100px;
+  background-color: #38336d;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.friend-icon {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 8px;
+}
+
+.friend-icon i {
+  font-size: 22px;
+}
+
+.friend-icon h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header .view-btn {
+  background-color: transparent;
+  border: none;
+  color: #d3d3d3;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header .view-btn:hover {
+  color: white;
+}
+
+.profile-list {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  gap: 20px;
+  transition: 0.3s;
+}
+
+.profile-list.view-active {
+  height: 340px;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.profile-info span {
+  font-size: 15px;
+}
+
+.profile-info small {
+  color: #d3d3d3;
+}
+
+.group-btn button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.group-btn .confirm-btn {
+  background-color: #217ce4;
+}
+
+.group-btn .cancel-btn{
+  background-color: #e4e4e4;
+  color: black;
+}
+
+.group-btn p{
+  color: #d3d3d3;
+  font-size: 14px;
+}
+
+.profile-item .confirm-btn:hover {
+  background-color: #0d61c0;
+}
